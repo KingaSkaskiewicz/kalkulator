@@ -1,0 +1,59 @@
+﻿
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/">
+    <title>Calculator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="content/dist/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Gloria Hallelujah' rel='stylesheet'>
+</head>
+<body ng-app="myApp" ng-controller="mainCtrl" ng-keyup="keyPressed($event)">
+    <div >
+
+
+        <div class="calculator">
+
+            <input class="viewer" readonly ng-model="model.calculator.resultText"></input>
+            <button class="button-important" ng-click="model.calculator.functionButtonClicked('c')">c</button>
+
+            <button class="button" ng-click="model.calculator.numberButtonClicked('7')">7</button>
+            <button class="button" ng-click="model.calculator.numberButtonClicked('8')">8</button>
+            <button class="button" ng-click="model.calculator.numberButtonClicked('9')">9</button>
+            <button class="button-side" ng-click="model.calculator.functionButtonClicked('+')">+</button>
+
+            <button class="button" ng-click="model.calculator.numberButtonClicked('4')">4</button>
+            <button class="button" ng-click="model.calculator.numberButtonClicked('5')">5</button>
+            <button class="button" ng-click="model.calculator.numberButtonClicked('6')">6</button>
+            <button class="button-side" ng-click="model.calculator.functionButtonClicked('-')">-</button>
+
+            <button class="button" ng-click="model.calculator.numberButtonClicked('1')">1</button>
+            <button class="button" ng-click="model.calculator.numberButtonClicked('2')">2</button>
+            <button class="button" ng-click="model.calculator.numberButtonClicked('3')">3</button>
+            <button class="button-side" ng-click="model.calculator.functionButtonClicked('/')">/</button>
+
+            <button class="button" ng-click="model.calculator.numberButtonClicked('0')">0</button>
+            <button class="button" ng-click="model.calculator.numberButtonClicked('.')">.</button>
+            <button class="button-important" ng-click="model.calculator.functionButtonClicked('=')">=</button>
+            <button class="button-side" ng-click="model.calculator.functionButtonClicked('x')">x</button>
+
+            <p data-ng-bind="model.keyPressed"></p>
+
+
+
+        </div>
+
+    </div>
+
+    <script src="content/src/js/app/main.js"></script>
+    <script src="content/src/js/app/controllers/main.controller.js"></script>
+</body>
