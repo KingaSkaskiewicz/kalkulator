@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Kalkulator/config/applicationhost.config
+/.vs/Kalkulator/v16/.suo
+/WebApplication/bin
+/WebApplication/obj
+/WebApplication/node_modules
+/.vs/slnx.sqlite
