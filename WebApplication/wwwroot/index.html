@@ -13,18 +13,23 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="content/dist/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Gloria Hallelujah' rel='stylesheet'>
 </head>
-<body ng-app="myApp" ng-controller="mainCtrl" ng-keyup="keyPressed($event)">
-    <div >
+<body ng-app="myApp" ng-controller="mainCtrl">
 
 
-        <div class="calculator">
 
-            <input class="viewer" readonly ng-model="model.calculator.resultText"></input>
-            <button class="button-important" ng-click="model.calculator.functionButtonClicked('c')">c</button>
+    <div class="calculator">
+
+        <input class="viewer" readonly ng-model="model.calculator.resultText"></input>
+
+        <div class="row" style="margin-left: 60px">
+            <button class="button-important" ng-click="model.calculator.functionButtonClicked('c')">C</button>
+        </div>
+
+        <div class="buttons-area">
 
             <button class="button" ng-click="model.calculator.numberButtonClicked('7')">7</button>
             <button class="button" ng-click="model.calculator.numberButtonClicked('8')">8</button>
@@ -45,15 +50,13 @@
             <button class="button" ng-click="model.calculator.numberButtonClicked('.')">.</button>
             <button class="button-important" ng-click="model.calculator.functionButtonClicked('=')">=</button>
             <button class="button-side" ng-click="model.calculator.functionButtonClicked('x')">x</button>
-
-            <p data-ng-bind="model.keyPressed"></p>
-
-
+        </div>
 
         </div>
 
-    </div>
 
-    <script src="content/src/js/app/main.js"></script>
-    <script src="content/src/js/app/controllers/main.controller.js"></script>
+
+
+        <script src="content/src/js/app/main.js"></script>
+        <script src="content/src/js/app/controllers/main.controller.js"></script>
 </body>

@@ -32,6 +32,10 @@
                 this.calculateResultText();
             },
             functionButtonClicked: function (functionType) {
+                if (this.leftSide === "") {
+                    return;
+                }
+
                 if (functionType === "+") {
                     this.operator = "+";
                     this.operatorFunction = this.add;
