@@ -25,6 +25,8 @@ namespace WebApplication
                 app.UseDeveloperExceptionPage();
             }
 
+            //for git pages to work nice with .net debugging
+            app.UsePathBase("/Kalkulator");
             app.UseDefaultFiles();
             app.UseStaticFiles();
         }
