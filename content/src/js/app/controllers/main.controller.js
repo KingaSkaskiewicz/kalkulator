@@ -8,7 +8,7 @@
 
                 if (this.operator == "") {
 
-                    
+
                     if (number === "0") {
                         canAddNumber = this.leftSide.length > 0
                     }
@@ -91,9 +91,9 @@
             multiply: function () {
                 this.leftSide = parseFloat(this.leftSide) * parseFloat(this.rightSide);
             }
-       }
-   };
-   
+        }
+    };
+
 
     $scope.keyPressed = function ($event) {
 
